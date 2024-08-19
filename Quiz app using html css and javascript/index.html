@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #click,#click1,#click2,#click3{
+            width: 600px;
+            height: 60px;
+            background-color: white;
+            margin-left: 30px;
+        }
+        .container{
+            background-color: antiquewhite;
+            width: 700px;
+            height: 500px;
+            margin-left: 400px;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .redbox{
+            width: 40px;
+            background-color: rgb(121, 2, 2);
+            height: 60px;
+            color: white;
+            font-size: 40px;
+        }
+        b{
+            position: relative;
+            bottom: 40px;
+        }
+        .answer{
+            position: relative;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>
+        In a web design,what does css stand for?
+    </h1>
+    <div class="answer">
+    <div id="click" onclick="click()"><div class="redbox">A</div><b>Counter Strike Source</b></div><br>
+    <div id="click1" onclick="click()"><div class="redbox">B</div><b>Corrective style sheet</b></div><br>
+    <div id="click2" onclick="click()"><div class="redbox">C</div><b>Computer style sheet</b></div><br>
+    <div id="click3" onclick="click1()"><div class="redbox">D</div><b>Cascading style sheet</b></div>
+</div></div>
+
+<script>
+    const answer=document.getElementById("click3");
+        answer.addEventListener('click',()=>{answer.style.backgroundColor="green"})
+
+        const ans=document.getElementById("click");
+        ans.addEventListener('click',()=>{ans.style.backgroundColor="red"})
+
+        const ans1=document.getElementById("click1");
+        ans1.addEventListener('click',()=>{ans1.style.backgroundColor="red"})
+
+        const ans2=document.getElementById("click2");
+        ans2.addEventListener('click',()=>{ans2.style.backgroundColor="red"})
+</script>
+</body>
+</html>

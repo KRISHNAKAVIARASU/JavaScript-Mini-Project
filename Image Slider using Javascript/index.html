@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        font-size: 50px;
+        background-color:white;
+        border-style: none;
+        cursor: pointer;
+        margin: 50px;
+      }
+      img{
+        width: 40rem;
+      }
+      .slider{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .direc{
+        padding: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <img src="image1.jpg" alt="Image 1" />
+      <img src="image2.jpg" alt="Image 2" />
+      <img src="image3.jpg" alt="Image 3" />
+      <div class="direc">
+      <button id="prev"><<</button>
+      <button id="next">>></button>
+      </div>
+    </div>
+    <script>
+      const images = document.querySelectorAll(".slider img");
+      let currentImage = 0;
+
+      document.getElementById("prev").addEventListener("click", () => {
+        currentImage = (currentImage - 1 + images.length) % images.length;
+        showImage();
+      });
+
+      document.getElementById("next").addEventListener("click", () => {
+        currentImage = (currentImage + 1) % images.length;
+        showImage();
+      });
+
+      function showImage() {
+        images.forEach((img, index) => {
+          img.style.display = index === currentImage ? "block" : "none";
+        });
+      }
+
+      showImage();
+    </script>
+  </body>
+</html>

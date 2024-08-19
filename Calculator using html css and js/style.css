@@ -1,0 +1,50 @@
+h1{
+    text-align: center;
+}
+input[type=button] {
+    cursor: pointer;
+    width: 100px;
+    height: 80px;
+    float: left;
+    padding: 0;
+    margin: 5px;
+    border-radius: 10px;
+    border-style: none;
+    background: rgb(252, 246, 246);
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    color: black;
+}
+
+input[type=text] {
+    width: 350px;
+    height: 80px;
+    font-size: 50px;
+    border-style: none;
+    border-radius: 5px;
+    
+    
+}
+
+table {
+    background-color: rgb(51, 218, 32);
+    /* position: absolute; */
+    margin: auto auto;
+    top: 100px;
+    padding: 1.5rem;
+    border-radius:5px;
+
+}
+.btn1{
+    width: 80px;
+    height: 70px;
+    position: relative;
+    left: 20px;
+    bottom: 10px;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    border: red 1px solid;
+}
